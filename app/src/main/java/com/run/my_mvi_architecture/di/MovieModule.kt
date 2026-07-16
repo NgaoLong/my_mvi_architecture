@@ -1,6 +1,9 @@
 package com.run.my_mvi_architecture.di
 
 import com.run.my_mvi_architecture.domain.repository.MovieRepository
+import com.run.my_mvi_architecture.domain.usecase.GetMovieDetailUseCase
+import com.run.my_mvi_architecture.domain.usecase.GetMoviesUseCase
+import com.run.my_mvi_architecture.domain.usecase.MovieUseCases
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

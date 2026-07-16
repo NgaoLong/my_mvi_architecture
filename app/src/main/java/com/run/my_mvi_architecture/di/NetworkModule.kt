@@ -1,5 +1,6 @@
 package com.run.my_mvi_architecture.di
 
+import com.run.my_mvi_architecture.BuildConfig
 import com.run.my_mvi_architecture.data.remote.MovieApi
 import dagger.Module
 import dagger.Provides
