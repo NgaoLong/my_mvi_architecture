@@ -43,6 +43,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     kapt {
         correctErrorTypes = true
@@ -54,19 +55,19 @@ android {
             dimension = "environment"
             applicationIdSuffix = ".dev"
             versionNameSuffix = "-dev"
-            buildConfigField("String", "BASE_URL", "\"https://fakestoreapi.com/\"")
+            buildConfigField("String", "BASE_URL", "\"https://www.omdbapi.com/\"")
             buildConfigField("String", "OMDB_API_KEY", "\"c856196c\"")
         }
         create("staging") {
             dimension = "environment"
             applicationIdSuffix = ".staging"
             versionNameSuffix = "-staging"
-            buildConfigField("String", "BASE_URL", "\"https://fakestoreapi.com/\"")
+            buildConfigField("String", "BASE_URL", "\"https://www.omdbapi.com/\"")
             buildConfigField("String", "OMDB_API_KEY", "\"c856196c\"")
         }
         create("production") {
             dimension = "environment"
-            buildConfigField("String", "BASE_URL", "\"https://fakestoreapi.com/\"")
+            buildConfigField("String", "BASE_URL", "\"https://www.omdbapi.com/\"")
             buildConfigField("String", "OMDB_API_KEY", "\"c856196c\"")
         }
     }
