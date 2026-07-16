@@ -48,6 +48,28 @@ android {
         correctErrorTypes = true
         useBuildCache = true
     }
+    flavorDimensions += "environment"
+    productFlavors {
+        create("dev") {
+            dimension = "environment"
+            applicationIdSuffix = ".dev"
+            versionNameSuffix = "-dev"
+            buildConfigField("String", "BASE_URL", "\"https://fakestoreapi.com/\"")
+            buildConfigField("String", "OMDB_API_KEY", "\"c856196c\"")
+        }
+        create("staging") {
+            dimension = "environment"
+            applicationIdSuffix = ".staging"
+            versionNameSuffix = "-staging"
+            buildConfigField("String", "BASE_URL", "\"https://fakestoreapi.com/\"")
+            buildConfigField("String", "OMDB_API_KEY", "\"c856196c\"")
+        }
+        create("production") {
+            dimension = "environment"
+            buildConfigField("String", "BASE_URL", "\"https://fakestoreapi.com/\"")
+            buildConfigField("String", "OMDB_API_KEY", "\"c856196c\"")
+        }
+    }
 }
 
 dependencies {
